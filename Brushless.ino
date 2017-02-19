@@ -19,7 +19,7 @@ void setup(){
   
   
   pinMode(5, INPUT);//dir
-  pinMode(6, INPUT);//dir
+  pinMode(6, INPUT);//step
 }
 int fwd(){
    while(1){
@@ -90,8 +90,8 @@ void loop(){
   digitalWrite(13, LOW);
   digitalWrite(12,0);digitalWrite(11,0);digitalWrite(10,0);
   digitalWrite(9,0);digitalWrite(8,0);digitalWrite(7,0);
-  if(digitalRead(5)==1){
-  if (digitalRead(4)==0) {digitalWrite(13, HIGH);bwd();}
-  if (digitalRead(4)==1) {digitalWrite(13, HIGH);fwd();}
+  if(digitalRead(6)==1){
+  if (digitalRead(5)==0) {digitalWrite(13, HIGH);bwd();}
+  if (digitalRead(5)==1) {digitalWrite(13, HIGH);fwd();}
   }
 }
